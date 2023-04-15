@@ -13,10 +13,12 @@
       <div class="row login-form">
         <div class="col-md-6 col-sm-12">
           <h2>Login</h2>
-          <% if(message==="invalid password" ){ %>
+          <% if(msg.message==="invalid password" ){ %>
             <p class="p-2 bg-danger text-light">Please Enter a valid password!</p>
-            <% } else if(message=='invalid' ) { %>
+            <% } else if(msg.message=='invalid' ) { %>
               <p class="p-2 bg-danger text-light">Please Enter valid Information</p>
+            <% } else if(msg.message == 'loggedout' ) { %>
+              <p class="p-2 bg-danger text-light">Successfully logged out!</p>
             <% } %>
           <form action="/login" method="POST">
             <div class="form-group">

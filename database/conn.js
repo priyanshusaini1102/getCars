@@ -1,5 +1,5 @@
 let mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/loginSystem", {
+mongoose.connect("mongodb+srv://priyanshu:-4PRlfmvnb@cluster0.xqgdx.mongodb.net/?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true
   })
@@ -9,3 +9,5 @@ mongoose.connect("mongodb://localhost:27017/loginSystem", {
   .catch((error) => {
     console.log(error);
   });
+
+  // mongodb://localhost:27017/loginSystem

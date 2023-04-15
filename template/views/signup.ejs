@@ -14,10 +14,12 @@
       <div class="row signup-form">
         <div class="col-md-6 col-sm-12">
           <h2>SignUP</h2>
-          <% if(message==="already exists" ){ %>
+          <% if(msg.message==="already exists" ){ %>
             <p class="p-2 bg-danger text-light">Email already Registered!</p>
-            <% } else if(message=='registered' ) { %>
+            <% } else if(msg.message=='registered' ) { %>
               <p class="p-2 bg-success text-light">You're Registered Successfully!</p>
+            <% } else if(msg.message=='minLength' ) { %>
+              <p class="p-2 bg-success text-light">You have entered a weak Password!</p>
               <% }%>          
                   <form action="/signup" method="POST">
                     <div class="form-group">
